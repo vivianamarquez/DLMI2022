@@ -31,7 +31,7 @@ data/ACDC: data/acdc
 	mv $@_tmp $@
 data/acdc: data/acdc.lineage data/acdc.zip
 	$(info $(yellow)unzip data/acdc.zip$(reset))
-	md5sum -c $<
+# 	md5sum -c $<
 	rm -rf $@_tmp $@
 	unzip -q $(word 2, $^) -d $@_tmp
 	rm $@_tmp/training/*/*_4d.nii.gz  # space optimization
